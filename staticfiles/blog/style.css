@@ -1,3 +1,13 @@
 body {
+    font-family: Arial;
     background-color: #cccccc;
+}
+nav{
+    background-color:#333;
+    padding:10px;
+}
+nav a {
+    color:white;
+    margin-right:10px;
+    text-decoration: none;
 }

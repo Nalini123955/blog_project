@@ -29,7 +29,7 @@ def index(request):
     page_obj = paginator.get_page(page_number)
     
 
-    return render(request, "blog/index.html", {'blog_title': blog_title, 'page_obj':page_obj})
+    return render(request, "blog/index.html", {'blog_title': blog_title, 'page_obj': page_obj})
 
 def detail(request, slug):
     #static data
@@ -68,7 +68,8 @@ def contact_view(request):
             logger.debug('Form validation failure')
         return render(request,'blog/contact.html',{'form':form, 'name': name, 'email':email, 'message':message})
     return  render(request, "blog/contact.html")
-        #return render(request, 'blog/contact.html
+
+        #return render(request, 'blog/contact.html)
 def about_view(request):
     about_content = AboutUs.objects.first().content
     return render(request, 'blog/about.html', {'about_content':about_content}) 
