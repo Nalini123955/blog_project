@@ -29,9 +29,8 @@ SECRET_KEY = 'django-insecure-c&ths-=193)6b+zayg!r$306q7u6n(w+=(i)wn2)_xlahs_s88
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
 ALLOWED_HOSTS =[
-    'NaliniProgram123.pythonanywhere.com'
+    '127.0.0.1'
 ]
    
 
@@ -85,10 +84,10 @@ WSGI_APPLICATION = 'myapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME' : 'blog',
+        'NAME':'blog',
         'USER': 'root',
         'PASSWORD':'nal**123',
-        'HOST':'NaliniProgram2004.mysql.pythonanywhere-services.com',
+        'HOST':'127.0.0.1', 
         'PORT':'3306',
         
     }
@@ -104,6 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
+
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
     {
@@ -130,7 +130,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
-
+import os
 STATIC_URL = '/static/'
 STATIC_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT= os.path.join(BASE_DIR,'staticfiles')
